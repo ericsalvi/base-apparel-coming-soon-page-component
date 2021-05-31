@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/four-card-feature-section-using-gaps-within-flexbox-mobilefirst-css-ImSimoRKn)
-- Live Site URL: [https://ericsalvi.github.io/Four-card-feature-section-component/](https://ericsalvi.github.io/Four-card-feature-section-component/)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-css-js-flex-form-submit-modal-feature-h1vSYv3fi)
+- Live Site URL: [https://ericsalvi.github.io/base-apparel-coming-soon-page-component/](https://ericsalvi.github.io/base-apparel-coming-soon-page-component/)
 
 ## My process
 
