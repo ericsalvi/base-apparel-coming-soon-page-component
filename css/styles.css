@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-color: hsl(0, 36%, 70%);
+  --opacity-color: hsl(0 36% 70% / 50%);
+  --soft-color: hsl(0, 93%, 68%);
+  --dark-color: hsl(0, 6%, 24%);
+  --bg-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --bg-button: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --bg-button-hover: linear-gradient(
+    135deg,
+    hsl(356, 76%, 92%),
+    hsl(4, 72%, 87%)
+  );
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background: var(--bg-color);
+  color: var(--desaturated-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+header {
+  padding: 31px 30px 27px;
+}
+header img {
+  width: 102px;
+}
+.mobile img {
+  width: 100%;
+}
+.hero-banner.desktop {
+  display: none;
+}
+article {
+  padding: 58.5px 32px;
+  -webkit-transition: padding 0.2s;
+  -o-transition: padding 0.2s;
+  transition: padding 0.2s;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 11px;
+  line-height: 1.06;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+  padding-bottom: 16.5px;
+}
+h1 span {
+  color: var(--dark-color);
+  font-size: inherit;
+  font-weight: 600;
+}
+p {
+  font-size: 0.87rem;
+  letter-spacing: 0.1px;
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 31px;
+  text-align: center;
+}
+
+/* 
+ ** Subscription Form Content 
+ */
+
+.subscribe {
+  position: relative;
+}
+.subscribe.form-error input {
+  border-color: red;
+}
+.subscribe.form-error .error-icon,
+.subscribe.form-error .error-msg {
+  display: block;
+}
+input {
+  background: transparent;
+  border: 1px solid var(--opacity-color);
+  border-radius: 60px;
+  outline: none;
+  padding: 0.89em 1.45rem;
+  width: 100%;
+}
+input::-webkit-input-placeholder {
+  color: var(--opacity-color);
+  font-size: 0.875rem;
+}
+input::-moz-placeholder {
+  color: var(--opacity-color);
+  font-size: 0.875rem;
+}
+input:-ms-input-placeholder {
+  color: var(--opacity-color);
+  font-size: 0.875rem;
+}
+input::-ms-input-placeholder {
+  color: var(--opacity-color);
+  font-size: 0.875rem;
+}
+input::placeholder {
+  color: var(--opacity-color);
+  font-size: 0.875rem;
+}
+.input-submit {
+  background-image: var(--bg-button);
+  border: 0;
+  -webkit-box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 32%);
+  box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 32%);
+  border-radius: 50px;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65px;
+}
+.input-submit:hover {
+  background-image: var(--bg-button-hover);
+  -webkit-box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 52%);
+  box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 52%);
+}
+.input-submit::after {
+  content: url(../images/icon-arrow.svg);
+  position: relative;
+  top: 2px;
+}
+.error-icon {
+  display: none;
+  position: absolute;
+  right: 80px;
+  top: 11px;
+}
+.error-msg {
+  bottom: -30px;
+  color: red;
+  display: none;
+  font-size: 13px;
+  left: 24px;
+  position: absolute;
+}
+
+/* 
+ ** Modal Content 
+ */
+
+#modal {
+  display: none;
+}
+.modal-open #modal {
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.modal-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.modal-container::after {
+  background: black;
+  content: "";
+  height: 100%;
+  opacity: 0.25;
+  position: absolute;
+  width: 100%;
+}
+.modal * {
+  text-align: center;
+}
+.modal {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 32%);
+  box-shadow: 0px 15px 30px -6px rgb(0 0 0 / 32%);
+  padding: 30px;
+  text-align: center;
+  z-index: 10;
+}
+.modal-msg {
+  padding-bottom: 0;
+}
+.close-modal {
+  background-image: var(--bg-button);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.8rem;
+  padding: 12px 25px;
+  text-transform: uppercase;
+}
+@media (min-width: 478px) {
+  article {
+    margin: 0 auto;
+    width: 479px;
+  }
+}
+@media (min-width: 649px) {
+  main {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-size: cover;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    height: 100vh;
+    padding: 65px 52px 24px;
+  }
+  article {
+    margin: auto 0;
+    max-width: 445px;
+    padding: 30px 0;
+    width: 100%;
+  }
+  header {
+    max-width: 445px;
+    padding: 0;
+    width: 100%;
+  }
+  header img {
+    width: 160px;
+  }
+  .hero-banner.mobile {
+    display: none;
+  }
+  .hero-banner.desktop {
+    background: url("../images/hero-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 42.5%;
+    flex: 0 0 42.5%;
+    height: 100vh;
+  }
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 15.5px;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    padding-bottom: 42px;
+    text-align: left;
+  }
+  input {
+    padding: 1.15rem 100px 1.15rem 2rem;
+  }
+  .error-icon {
+    right: 115px;
+    top: 15px;
+  }
+  .input-submit {
+    width: 100px;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  input::placeholder {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1040px) {
+  main {
+    padding: 65px 52px 24px 0;
+  }
+  h1 {
+    font-size: 4.1rem;
+  }
+}

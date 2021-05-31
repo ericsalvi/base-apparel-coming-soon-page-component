@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <main>
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <h2>Success!</h2>
+        <p class="modal-msg">Thank you for Subscribing.</p>
+        <p class="modal__email-msg"></p>
+        <button id="close" type="submit" class="close-modal">Close</button>
+      </div>
+    </div>
+    <header>
+      <img src="./images/logo.svg" alt="base apparel logo">
+    </header>
+    <div class="hero-banner mobile">
+      <img src="./images/hero-mobile.jpg" alt="">
+    </div>
+    <article>
+      <h1>We're <span>coming soon</span></h1>
+        <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>   
+      <div class="subscribe">
+        <input id="email" class="email-error" type="email" placeholder="Email Address">
+        <div class="error-icon"><img src="./images/icon-error.svg" alt=""></div>
+        <button id="submit" type="submit" class="input-submit"></button>
+        <span class="error-msg"></span> 
+      </div>
+    </article>
+  </main>
+  <div class="hero-banner desktop"></div>
+  <script src="./js/scripts.js" async></script>
+</body>
+</html>
